@@ -1,6 +1,9 @@
+/* styles.css */
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 body {
@@ -10,6 +13,7 @@ body {
 
 .content {
     text-align: center;
+    border: 1px solid #000; /* Add a border around the edges */
 }
 
 .title {
@@ -27,6 +31,7 @@ body {
     color: #006EB6;
     line-height: 1.5;
     font-size: 20px;
+    text-decoration: underline;
 }
 
 main {
@@ -35,6 +40,7 @@ main {
     text-align: left;
     padding: 0 20px;
     margin-top: 20px;
+    line-height: 1.5;
 }
 
 .list {
