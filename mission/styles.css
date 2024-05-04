@@ -1,3 +1,12 @@
+.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark .content {
+    border-color: #ccc;
+}
+
 body {
     font-size: 20px;
     font-family: "Times New Roman", Times, serif;
