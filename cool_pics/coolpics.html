@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cool Pics</title>
-        <meta name="description" content="A photography gallery website">
-        <meta name="author" content="Jay Underwood">
-        <link rel="stylesheet" type="text/css" href="styles/coolpics.css">
-        <!-- I put the js link before body close tag cause its faster -->
-    </head>    
-    <body>
-        <header>
-            <h1>
-                Cool Pics 📷
-            </h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Places</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h2>Current Work</h2>
-            <section class="gallery">
-                <figure>  
-                    <img src="images/hotsprings.jpeg" alt="picture">
-                </figure>
-                <figure>  
-                    <img src="images/hotsprings.jpeg" alt="picture">
-                </figure>
-                <figure>  
-                    <img src="images/hotsprings.jpeg" alt="picture">
-                </figure>
-                <figure>  
-                    <img src="images/hotsprings.jpeg" alt="picture">
-                </figure>
-                <figure>  
-                    <img src="images/hotsprings.jpeg" alt="picture">
-                </figure>
-                <figure>  
-                    <img src="images/hotsprings.jpeg" alt="picture">
-                </figure>
-                <figure>  
-                    <img src="images/hotsprings.jpeg" alt="picture">
-                </figure>
-                <figure>  
-                    <img src="images/hotsprings.jpeg" alt="picture">
-                </figure>
-                <figure>  
-                    <img src="images/hotsprings.jpeg" alt="picture">
-                </figure>
-            </section>
-        </main>
-        <footer>
-            <div class="copyright">
-                &copy;<span id="year"></span> Not a real site 😀.
-            </div>
-        </footer>
-        <script src="scripts/coolpics.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Pics</title>
+    <meta name="description" content="A photography gallery website">
+    <meta name="author" content="Jay Underwood">
+    <link rel="stylesheet" type="text/css" href="styles/coolpics.css">
+</head>    
+<body>
+    <header>
+        <h1>Cool Pics 📷</h1>
+        <nav>
+            <button id="menu-toggle">Menu</button>
+            <ul id="nav-menu" class="hidden">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Places</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Current Work</h2>
+        <section class="gallery">
+            <figure>  
+                <img src="images/hotsprings.jpeg" alt="Hot Springs">
+            </figure>
+            <figure>  
+                <img src="images/hotsprings.jpeg" alt="Hot Springs">
+            </figure>            
+            <figure>  
+                <img src="images/hotsprings.jpeg" alt="Hot Springs">
+            </figure>            
+            <figure>  
+                <img src="images/hotsprings.jpeg" alt="Hot Springs">
+            </figure>            
+            <figure>  
+                <img src="images/hotsprings.jpeg" alt="Hot Springs">
+            </figure>            
+            <figure>  
+                <img src="images/hotsprings.jpeg" alt="Hot Springs">
+            </figure>            
+            <figure>  
+                <img src="images/hotsprings.jpeg" alt="Hot Springs">
+            </figure>            
+            <figure>  
+                <img src="images/hotsprings.jpeg" alt="Hot Springs">
+            </figure>            
+            <figure>  
+                <img src="images/hotsprings.jpeg" alt="Hot Springs">
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <div class="copyright">
+            &copy;<span id="year"></span> Not a real site 😀.
+        </div>
+    </footer>
+    <div id="viewer" class="hidden">
+        <button id="close-viewer">X</button>
+        <img src="" alt="Image viewer">
+    </div>
+    <script src="scripts/coolpics.js"></script>
+</body>
 </html>

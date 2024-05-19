@@ -85,22 +85,6 @@ footer {
   color: var(--text-color);
 }
 
-@media (min-width: 700px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1000px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr); 
-  }
-  
-  nav ul {
-    justify-content: space-around;
-  }
-}
-
 #menu-toggle {
     display: none;
     background: none;
@@ -133,4 +117,49 @@ footer {
         text-align: center;
         padding: 10px 0;
     }
+}
+
+#viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    place-items: center;
+    z-index: 1000;
+    color: white;
+}
+
+#viewer img {
+    max-height: 100%;
+    max-width: 90%;
+}
+
+#close-viewer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+  
+  nav ul {
+    justify-content: space-around;
+  }
 }
