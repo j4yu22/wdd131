@@ -1,0 +1,337 @@
+body {
+    background-color: #2e2e2e;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2e2e2e;
+    color: white;
+}
+
+.start-screen h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.start-screen p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.start-screen button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.start-screen button:hover {
+    background-color: #5fc481;
+}
+
+#money_hud {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#deck {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#chip_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.chip-wrapper {
+    position: relative; /* Ensure the wrapper is relative to position counters correctly */
+}
+
+.chip_counter {
+    color: rgb(160, 160, 160);
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 14px;
+}
+
+.chip {
+    background-color: transparent;
+    border: none;
+    margin: 10px;
+    position: relative;
+}
+
+.chip img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.chip-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    pointer-events: none;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black border */
+}
+
+#confirm_bet {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirm_bet:hover {
+    background-color: #45a049;
+}
+
+#dealer_hand, #player_hand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#dealer_hand ul, #player_hand ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+#dealer_hand ul li, #player_hand ul li {
+    margin: 0 5px;
+}
+
+#options {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#options button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#options button:hover {
+    background-color: #007B9E;
+}
+
+/* Tips button */
+#tips-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#tips-button:hover {
+    background-color: #45a049;
+}
+
+/* Tips menu */
+.tips-menu {
+    position: fixed;
+    bottom: 70px;
+    left: 20px;
+    background-color: #2e2e2e;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    z-index: 1000;
+}
+
+.tips-menu h2 {
+    margin-top: 0;
+}
+
+.tips-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tips-menu li {
+    margin: 5px 0;
+}
+
+.close-tips {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.close-tips:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.card {
+    position: relative; /* Ensure the pseudo-element is positioned relative to the .card */
+    border: 5px solid white; /* White border */
+    border-radius: 8px; /* Rounded corners */
+    width: 100px; /* Set the same width as the other card */
+    height: 143px; /* Set the same height as the other card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure content doesn't overflow the rounded corners */
+    background-color: white; /* White background to cover the gap */
+}
+
+.card::before {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely within the .card */
+    top: 0; /* Adjust to cover the gap */
+    left: 0; /* Adjust to cover the gap */
+    right: 0; /* Adjust to cover the gap */
+    bottom: 0; /* Adjust to cover the gap */
+    background-color: white; /* White background color */
+    border-radius: 8px; /* Match the rounded corners of the .card */
+    z-index: -1; /* Ensure it is behind the card image */
+}
+
+.card img {
+    width: calc(100% + 2px); /* Slightly larger width to cover the corners */
+    height: calc(100% + 2px); /* Slightly larger height to cover the corners */
+    border-radius: inherit; /* Inherit the parent's border radius */
+    z-index: 1; /* Ensure the image is above the pseudo-element */
+    clip-path: inset(2px round 0px); /* Crop 1px from all sides and ensure rounded corners */
+}
+.card-deck {
+    position: relative; /* Position it relative to contain the pseudo-elements */
+    width: 100px; /* Width of the card */
+    height: 143px; /* Height of the card */
+}
+
+.card-deck::before,
+.card-deck::after,
+.card-deck::nth-child(3),
+.card-deck::nth-child(4),
+.card-deck::nth-child(5),
+.card-deck::nth-child(6),
+.card-deck::nth-child(7),
+.card-deck::nth-child(8) {
+    content: ''; /* Create pseudo-elements */
+    position: absolute; /* Position them absolutely within the .card-deck */
+    bottom: 0; /* Position at the bottom of the deck */
+    left: 0; /* Position at the left of the deck */
+    width: 100px; /* Match the width of the card */
+    height: 143px; /* Match the height of the card */
+    background: url('../images/facedown_card.jpg') no-repeat center center/cover; /* Use the same card image */
+    border: 5px solid white; /* White border */
+    border-radius: 8px; /* Rounded corners */
+    z-index: -1; /* Place them behind the main card image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+}
+
+.card-deck::before {
+    bottom: -5px; /* Adjust the position slightly to create the stack effect */
+    left: -5px;
+    z-index: -2; /* Ensure it's below the main card and the ::after pseudo-element */
+}
+
+.card-deck::after {
+    bottom: -10px; /* Adjust the position slightly to create the stack effect */
+    left: -10px;
+    z-index: -3; /* Ensure it's below the main card and the ::before pseudo-element */
+}
+
+.card-deck::nth-child(3) {
+    bottom: -15px;
+    left: -15px;
+    z-index: -4;
+}
+
+.card-deck::nth-child(4) {
+    bottom: -20px;
+    left: -20px;
+    z-index: -5;
+}
+
+.card-deck::nth-child(5) {
+    bottom: -25px;
+    left: -25px;
+    z-index: -6;
+}
+
+.card-deck::nth-child(6) {
+    bottom: -30px;
+    left: -30px;
+    z-index: -7;
+}
+
+.card-deck::nth-child(7) {
+    bottom: -35px;
+    left: -35px;
+    z-index: -8;
+}
+
+.card-deck::nth-child(8) {
+    bottom: -40px;
+    left: -40px;
+    z-index: -9;
+}
+
+.facedown-card {
+    position: relative; /* Ensure it's on top of the pseudo-elements */
+    z-index: 0;
+}

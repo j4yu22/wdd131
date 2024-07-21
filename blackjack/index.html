@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+    <div id="money_hud">
+        <h2>Balance: <span id="balance">100</span></h2>
+        <h3>Current Bet: <span id="current_bet"></span></h3>
+    </div>
+    <div id="deck" class="card-deck">
+        <img src="images/facedown_card.jpg" alt="deck image" class="facedown-card card">
+    </div>    
+    <div id="chip_buttons">
+        <div class="chip-wrapper">
+            <button id="bet_1" class="chip">
+                <div id="counter_1" class="chip_counter">0</div>
+                <img src="images/bet_1.jpg" alt="1">
+                <div class="chip-value">1</div>
+            </button>
+        </div>
+        <div class="chip-wrapper">
+            <button id="bet_5" class="chip">
+                <div id="counter_5" class="chip_counter">0</div>
+                <img src="images/bet_5.jpg" alt="5">
+                <div class="chip-value">5</div>
+            </button>
+        </div>
+        <div class="chip-wrapper">
+            <button id="bet_10" class="chip">
+                <div id="counter_10" class="chip_counter">0</div>
+                <img src="images/bet_10.jpg" alt="10">
+                <div class="chip-value">10</div>
+            </button>
+        </div>
+        <div class="chip-wrapper">
+            <button id="bet_25" class="chip">
+                <div id="counter_25" class="chip_counter">0</div>
+                <img src="images/bet_25.jpg" alt="25">
+                <div class="chip-value">25</div>
+            </button>
+        </div>
+        <div class="chip-wrapper">
+            <button id="bet_50" class="chip">
+                <div id="counter_50" class="chip_counter">0</div>
+                <img src="images/bet_50.jpg" alt="50">
+                <div class="chip-value">50</div>
+            </button>
+        </div>
+        <div class="chip-wrapper">
+            <button id="bet_100" class="chip">
+                <div id="counter_100" class="chip_counter">0</div>
+                <img src="images/bet_100.jpg" alt="100">
+                <div class="chip-value">100</div>
+            </button>
+        </div>
+        <div class="chip-wrapper">
+            <button id="bet_all" class="chip">
+                <img src="images/all_in.jpg" alt="All">
+                <div class="chip-value">All In</div>
+            </button>
+        </div>
+        <button id="confirm_bet">Confirm</button>
+    </div>
+    
+    <div id="dealer_hand" class="hidden">
+        <h3>Dealer hand</h3>
+        <ul id="dealer_hand_ul">
+            <li class="card">
+                <img src="images/facedown_card.jpg" alt="Hidden Card" class="card">
+            </li>
+        </ul>        
+    </div>
+    <div id="player_hand" class="hidden">
+        <h3>Player hand</h3>
+        <ul id="player_hand_ul">
+            <li id="player_card_1" class="card"></li>
+            <li id="player_card_2" class="card"></li>
+        </ul>
+    </div>
+    <div id="options" class="hidden">
+        <button id="hit">Hit</button>
+        <button id="stand">Stand</button>
+        <button id="double_down">Double Down</button>
+        <!-- add splitting later -->
+    </div>
+    <button id="tips-button">?</button>
+    <div id="tips_menu" class="tips-menu hidden">
+        <h2>Keybinds</h2>
+        <ul>
+            <li>Bet 1: 1</li>
+            <li>Bet 5: 2</li>
+            <li>Bet 10: 3</li>
+            <li>Bet 25: 4</li>
+            <li>Bet 50: 5</li>
+            <li>Bet 100: 6</li>
+            <li>Confirm Bet: ENTER</li>
+            <li>Hit: H</li>
+            <li>Stand: S</li>
+            <li>Double Down: D</li>
+        </ul>
+        <h2>Tips</h2>
+        <p>Left click chip buttons to add to current bet from balance, right click chip buttons to subtract.</p>
+        <p>You can press F12 and go to the 'console' tab in order to see background of what's happening, including hand totals.</p>
+        <p>The numberpad keys do not work for the number key shortcuts.</p>
+        <p>Lmk if any bugs happen, I'll add splitting later, enjoy! :)</p>
+        <button id="close_tips" class="close-tips">Close</button>
+    </div>
+    <script src="scripts/logic.js"></script>
+    <script src="scripts/animations.js"></script>
+</body>
+</html>
