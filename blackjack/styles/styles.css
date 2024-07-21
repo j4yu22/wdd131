@@ -225,41 +225,41 @@ body {
 }
 
 .card {
-    position: relative; /* Ensure the pseudo-element is positioned relative to the .card */
-    border: 5px solid white; /* White border */
-    border-radius: 8px; /* Rounded corners */
-    width: 100px; /* Set the same width as the other card */
-    height: 143px; /* Set the same height as the other card */
+    position: relative;
+    border: 5px solid white;
+    border-radius: 8px;
+    width: 100px;
+    height: 143px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Ensure content doesn't overflow the rounded corners */
-    background-color: white; /* White background to cover the gap */
+    overflow: hidden;
+    background-color: white;
 }
 
 .card::before {
-    content: ''; /* Create a pseudo-element */
-    position: absolute; /* Position it absolutely within the .card */
-    top: 0; /* Adjust to cover the gap */
-    left: 0; /* Adjust to cover the gap */
-    right: 0; /* Adjust to cover the gap */
-    bottom: 0; /* Adjust to cover the gap */
-    background-color: white; /* White background color */
-    border-radius: 8px; /* Match the rounded corners of the .card */
-    z-index: -1; /* Ensure it is behind the card image */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    border-radius: 8px;
+    z-index: -1;
 }
 
 .card img {
-    width: calc(100% + 2px); /* Slightly larger width to cover the corners */
-    height: calc(100% + 2px); /* Slightly larger height to cover the corners */
-    border-radius: inherit; /* Inherit the parent's border radius */
-    z-index: 1; /* Ensure the image is above the pseudo-element */
-    clip-path: inset(2px round 0px); /* Crop 1px from all sides and ensure rounded corners */
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border-radius: inherit;
+    z-index: 1;
+    clip-path: inset(2px round 0px);
 }
 .card-deck {
-    position: relative; /* Position it relative to contain the pseudo-elements */
-    width: 100px; /* Width of the card */
-    height: 143px; /* Height of the card */
+    position: relative;
+    width: 100px;
+    height: 143px;
 }
 
 .card-deck::before,
@@ -270,29 +270,29 @@ body {
 .card-deck::nth-child(6),
 .card-deck::nth-child(7),
 .card-deck::nth-child(8) {
-    content: ''; /* Create pseudo-elements */
-    position: absolute; /* Position them absolutely within the .card-deck */
-    bottom: 0; /* Position at the bottom of the deck */
-    left: 0; /* Position at the left of the deck */
-    width: 100px; /* Match the width of the card */
-    height: 143px; /* Match the height of the card */
-    background: url('../images/facedown_card.jpg') no-repeat center center/cover; /* Use the same card image */
-    border: 5px solid white; /* White border */
-    border-radius: 8px; /* Rounded corners */
-    z-index: -1; /* Place them behind the main card image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 143px;
+    background: url('../images/facedown_card.jpg') no-repeat center center/cover;
+    border: 5px solid white;
+    border-radius: 8px;
+    z-index: -1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-deck::before {
-    bottom: -5px; /* Adjust the position slightly to create the stack effect */
+    bottom: -5px;
     left: -5px;
-    z-index: -2; /* Ensure it's below the main card and the ::after pseudo-element */
+    z-index: -2;
 }
 
 .card-deck::after {
-    bottom: -10px; /* Adjust the position slightly to create the stack effect */
+    bottom: -10px;
     left: -10px;
-    z-index: -3; /* Ensure it's below the main card and the ::before pseudo-element */
+    z-index: -3;
 }
 
 .card-deck::nth-child(3) {
